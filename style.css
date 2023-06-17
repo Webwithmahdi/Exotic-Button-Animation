@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+html {
+  font-size: 62.5%;
+}
+.content {
+  margin: auto;
+}
+button {
+  padding: 1.5rem 2rem;
+  font-size: 2.5rem;
+  border: none;
+  outline: none;
+  border: 1px solid gold;
+  background: none;
+  color: white;
+  border-radius: 1rem 0;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color .3s .5s ease;
+}
+button:hover{
+  color: black;
+}
+.effect {
+  position: absolute;
+  display: block;
+  width: 30%;
+  height: 100%;
+  background-color: gold;
+  top: 0;
+  transform: rotate(45deg) translate(100%, 100%);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.effect:first-child {
+  left: 0;
+}
+.effect:nth-child(2) {
+  left: 25%;
+  transition-delay: 0.3s;
+}
+.effect:nth-child(3) {
+  left: unset;
+  right: 25%;
+  transition-delay: 0.6s;
+}
+.effect:last-child {
+  left: unset;
+  right: 0;
+  transition-delay: 0.9s;
+}
+button:hover .effect:first-child {
+  transform: rotate(0) translate(0, 0);
+}
+
+button:hover .effect:nth-child(2) {
+  transform: rotate(0) translate(0, 0);
+}
+
+button:hover .effect:nth-child(3) {
+  transform: rotate(0) translate(0, 0);
+}
+
+button:hover .effect:last-child {
+  transform: rotate(0) translate(0, 0);
+}
